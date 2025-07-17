@@ -49,28 +49,27 @@ export function AboutSection() {
           </p>
         </div>
 
-        {/* Main Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-          {/* Co-Founders Section */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {/* Co-Founders Section - Centered */}
+        <div className="mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {/* Founder 1 - Anukriti Verma */}
             <div className={`${isVisible ? 'fade-up' : 'opacity-0'}`} style={{
             animationDelay: '0.4s'
           }}>
-              <div className="glass-card p-6 text-center">
-                <div className="relative mb-4">
-                  <div className="w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-primary/30 glow-primary">
+              <div className="glass-card p-8 text-center">
+                <div className="relative mb-6">
+                  <div className="w-40 h-40 mx-auto rounded-full overflow-hidden border-4 border-primary/30 glow-primary">
                     <img src={founderImage} alt="Anukriti Verma - Founder" className="w-full h-full object-cover" />
                   </div>
-                  <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
-                    <div className="bg-gradient-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-semibold">
+                  <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2">
+                    <div className="bg-gradient-primary text-primary-foreground px-4 py-2 rounded-full text-sm font-semibold">
                       Visionary Founder
                     </div>
                   </div>
                 </div>
-                <h3 className="text-xl font-bold mb-1 text-gradient">Anukriti Verma</h3>
+                <h3 className="text-2xl font-bold mb-3 text-gradient">Anukriti Verma</h3>
                 
-                <p className="text-muted-foreground text-sm leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed">
                   "Our AI doesn't just generate buildings—it understands the human stories that will 
                   unfold within them. Every design decision is made with one goal: creating spaces that truly serve humanity."
                 </p>
@@ -81,45 +80,45 @@ export function AboutSection() {
             <div className={`${isVisible ? 'fade-up' : 'opacity-0'}`} style={{
             animationDelay: '0.6s'
           }}>
-              <div className="glass-card p-6 text-center">
-                <div className="relative mb-4">
-                  <div className="w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-primary/30 glow-primary">
+              <div className="glass-card p-8 text-center">
+                <div className="relative mb-6">
+                  <div className="w-40 h-40 mx-auto rounded-full overflow-hidden border-4 border-primary/30 glow-primary">
                     <img src={coFounderImage} alt="Aditya Rao - Co-Founder" className="w-full h-full object-cover" />
                   </div>
-                  <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
-                    <div className="bg-gradient-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-semibold">
+                  <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2">
+                    <div className="bg-gradient-primary text-primary-foreground px-4 py-2 rounded-full text-sm font-semibold">
                       Tech Co-Founder
                     </div>
                   </div>
                 </div>
-                <h3 className="text-xl font-bold mb-1 text-gradient">Aditya Rao</h3>
+                <h3 className="text-2xl font-bold mb-3 text-gradient">Aditya Rao</h3>
                 
-                <p className="text-muted-foreground text-sm leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed">
                   "I bridge the gap between cutting-edge AI technology and practical architectural solutions. 
                   My focus is on building scalable systems that empower architects to push creative boundaries while maintaining precision and efficiency."
                 </p>
               </div>
             </div>
           </div>
+        </div>
 
-          {/* Features Grid */}
-          <div className="space-y-6">
-            {features.map((feature, index) => <div key={feature.title} className={`glass-card p-6 magnetic-hover ${isVisible ? 'fade-up' : 'opacity-0'}`} style={{
-            animationDelay: `${0.8 + index * 0.1}s`
-          }}>
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center">
-                      <feature.icon className="h-6 w-6 text-primary-foreground" />
-                    </div>
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-semibold mb-2">{feature.title}</h4>
-                    <p className="text-muted-foreground">{feature.description}</p>
+        {/* Features Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+          {features.map((feature, index) => <div key={feature.title} className={`glass-card p-6 magnetic-hover ${isVisible ? 'fade-up' : 'opacity-0'}`} style={{
+          animationDelay: `${0.8 + index * 0.1}s`
+        }}>
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0">
+                  <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center">
+                    <feature.icon className="h-6 w-6 text-primary-foreground" />
                   </div>
                 </div>
-              </div>)}
-          </div>
+                <div>
+                  <h4 className="text-xl font-semibold mb-2">{feature.title}</h4>
+                  <p className="text-muted-foreground">{feature.description}</p>
+                </div>
+              </div>
+            </div>)}
         </div>
 
         {/* Stats Section */}
