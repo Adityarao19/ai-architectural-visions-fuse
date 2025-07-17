@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { Heart, Brain, Lightbulb, Users } from 'lucide-react';
 import founderImage from '@/assets/founder.jpg';
+import coFounderImage from '@/assets/co-founder.jpg';
 
 export function AboutSection() {
   const [isVisible, setIsVisible] = useState(false);
@@ -64,36 +65,59 @@ export function AboutSection() {
         </div>
 
         {/* Main Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          {/* Founder Section */}
-          <div className={`${isVisible ? 'fade-up' : 'opacity-0'}`} style={{ animationDelay: '0.4s' }}>
-            <div className="glass-card p-8 text-center">
-              {/* Founder Image */}
-              <div className="relative mb-6">
-                <div className="w-48 h-48 mx-auto rounded-full overflow-hidden border-4 border-primary/30 glow-primary">
-                  <img 
-                    src={founderImage} 
-                    alt="Anukriti Verma - Founder" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
-                  <div className="bg-gradient-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-semibold">
-                    Visionary Founder
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+          {/* Co-Founders Section */}
+          <div className="space-y-8">
+            {/* Founder 1 - Anukriti Verma */}
+            <div className={`${isVisible ? 'fade-up' : 'opacity-0'}`} style={{ animationDelay: '0.4s' }}>
+              <div className="glass-card p-6 text-center">
+                <div className="relative mb-4">
+                  <div className="w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-primary/30 glow-primary">
+                    <img 
+                      src={founderImage} 
+                      alt="Anukriti Verma - Founder" 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
+                    <div className="bg-gradient-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-semibold">
+                      Visionary Founder
+                    </div>
                   </div>
                 </div>
+                <h3 className="text-xl font-bold mb-1 text-gradient">Anukriti Verma</h3>
+                <p className="text-primary text-sm mb-3">AI Architecture Visionary</p>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  "Our AI doesn't just generate buildings—it understands the human stories that will 
+                  unfold within them. Every design decision is made with one goal: creating spaces that truly serve humanity."
+                </p>
               </div>
+            </div>
 
-              {/* Founder Info */}
-              <h3 className="text-2xl font-bold mb-2 text-gradient">Anukriti Verma</h3>
-              <p className="text-primary mb-4">AI Architecture Visionary</p>
-              
-              <p className="text-muted-foreground leading-relaxed">
-                "At Humanize AI Designs, we believe that the future of architecture lies not in replacing human creativity, 
-                but in amplifying it. Our AI doesn't just generate buildings—it understands the human stories that will 
-                unfold within them. Every line of code, every algorithm, every design decision is made with one goal: 
-                creating spaces that truly serve humanity."
-              </p>
+            {/* Founder 2 - Aditya Rao */}
+            <div className={`${isVisible ? 'fade-up' : 'opacity-0'}`} style={{ animationDelay: '0.6s' }}>
+              <div className="glass-card p-6 text-center">
+                <div className="relative mb-4">
+                  <div className="w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-primary/30 glow-primary">
+                    <img 
+                      src={coFounderImage} 
+                      alt="Aditya Rao - Co-Founder" 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
+                    <div className="bg-gradient-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-semibold">
+                      Tech Co-Founder
+                    </div>
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold mb-1 text-gradient">Aditya Rao</h3>
+                <p className="text-primary text-sm mb-3">Tech Innovation Lead</p>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  "I bridge the gap between cutting-edge AI technology and practical architectural solutions. 
+                  My focus is on building scalable systems that empower architects to push creative boundaries while maintaining precision and efficiency."
+                </p>
+              </div>
             </div>
           </div>
 
@@ -105,7 +129,7 @@ export function AboutSection() {
                 className={`glass-card p-6 magnetic-hover ${
                   isVisible ? 'fade-up' : 'opacity-0'
                 }`}
-                style={{ animationDelay: `${0.6 + index * 0.1}s` }}
+                style={{ animationDelay: `${0.8 + index * 0.1}s` }}
               >
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0">
