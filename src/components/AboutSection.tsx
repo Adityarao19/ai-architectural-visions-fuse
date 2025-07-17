@@ -67,7 +67,7 @@ export function AboutSection() {
         {/* Main Content */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           {/* Co-Founders Section */}
-          <div className="space-y-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Founder 1 - Anukriti Verma */}
             <div className={`${isVisible ? 'fade-up' : 'opacity-0'}`} style={{ animationDelay: '0.4s' }}>
               <div className="glass-card p-6 text-center">
