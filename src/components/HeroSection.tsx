@@ -62,14 +62,6 @@ export function HeroSection() {
             <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
           </Button>
           
-          <Button 
-            variant="outline" 
-            size="lg" 
-            className="glass-button magnetic-hover group px-8 py-4 text-lg font-semibold border-primary/30 hover:border-primary/50"
-          >
-            See Projects
-            <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-          </Button>
         </div>
 
         {/* Scroll Indicator */}
