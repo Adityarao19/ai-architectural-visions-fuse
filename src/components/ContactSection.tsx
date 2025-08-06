@@ -54,7 +54,7 @@ export function ContactSection() {
 
   return (
     <section id="contact" className="py-20 px-6">
-      <div className="container mx-auto">
+      <div className="container mx-auto max-w-4xl">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-bold mb-6 text-gradient glow-text">
