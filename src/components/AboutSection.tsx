@@ -56,7 +56,7 @@ export function AboutSection() {
             <div className={`${isVisible ? 'fade-up' : 'opacity-0'}`} style={{
             animationDelay: '0.4s'
           }}>
-              <div className="glass-card p-8 text-center">
+              <div className="glass-card p-8 text-center h-full flex flex-col">
                 <div className="relative mb-6">
                   <div className="w-40 h-40 mx-auto rounded-full overflow-hidden border-4 border-primary/30 glow-primary">
                     <img src={founderImage} alt="Anukriti Verma - Founder" className="w-full h-full object-cover" />
@@ -69,7 +69,7 @@ export function AboutSection() {
                 </div>
                 <h3 className="text-2xl font-bold mb-3 text-gradient">Anukriti Verma</h3>
                 
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed flex-grow">
                   "Our AI doesn't just generate buildings—it understands the human stories that will 
                   unfold within them. Every design decision is made with one goal: creating spaces that truly serve humanity."
                 </p>
@@ -80,7 +80,7 @@ export function AboutSection() {
             <div className={`${isVisible ? 'fade-up' : 'opacity-0'}`} style={{
             animationDelay: '0.6s'
           }}>
-              <div className="glass-card p-8 text-center">
+              <div className="glass-card p-8 text-center h-full flex flex-col">
                 <div className="relative mb-6">
                   <div className="w-40 h-40 mx-auto rounded-full overflow-hidden border-4 border-primary/30 glow-primary">
                     <img src={coFounderImage} alt="Aditya Rao - Co-Founder" className="w-full h-full object-cover" />
@@ -93,7 +93,7 @@ export function AboutSection() {
                 </div>
                 <h3 className="text-2xl font-bold mb-3 text-gradient">Aditya Rao</h3>
                 
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed flex-grow">
                   "I bridge the gap between cutting-edge AI technology and practical architectural solutions. 
                   My focus is on building scalable systems that empower architects to push creative boundaries while maintaining precision and efficiency."
                 </p>
