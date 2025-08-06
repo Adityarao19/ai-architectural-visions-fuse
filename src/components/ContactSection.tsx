@@ -67,7 +67,7 @@ export function ContactSection() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
-          <div className="glass-card p-6 max-w-lg mx-auto lg:mx-0">
+          <div className="glass-card p-4 max-w-md mx-auto lg:mx-0">
             <h3 className="text-2xl font-semibold mb-6">Start Your Project</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
