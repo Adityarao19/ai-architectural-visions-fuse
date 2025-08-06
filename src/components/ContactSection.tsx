@@ -27,12 +27,6 @@ export function ContactSection() {
 
   const contactInfo = [
     {
-      icon: MapPin,
-      title: 'Visit Our Studio',
-      content: 'Mumbai, Maharashtra, India',
-      subContent: 'By appointment only'
-    },
-    {
       icon: Phone,
       title: 'Call Us',
       content: '+91 98765 43210',
