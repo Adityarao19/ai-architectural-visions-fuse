@@ -145,37 +145,40 @@ export function ContactSection() {
           </div>
 
           {/* Contact Information */}
-          <div className="space-y-6">
-            {contactInfo.map((info, index) => (
-              <div 
-                key={info.title}
-                className="glass-card p-6 magnetic-hover fade-up"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center">
-                      <info.icon className="h-6 w-6 text-primary-foreground" />
+          <div className="glass-card p-4 h-full flex flex-col">
+            <h3 className="text-2xl font-semibold mb-6">Get in Touch</h3>
+            <div className="space-y-6 flex-1">
+              {contactInfo.map((info, index) => (
+                <div 
+                  key={info.title}
+                  className="p-4 rounded-lg border border-white/10 bg-white/5 magnetic-hover fade-up"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <div className="flex items-start space-x-4">
+                    <div className="flex-shrink-0">
+                      <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center">
+                        <info.icon className="h-6 w-6 text-primary-foreground" />
+                      </div>
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-semibold mb-1">{info.title}</h4>
+                      <p className="text-primary mb-1">{info.content}</p>
+                      <p className="text-muted-foreground text-sm">{info.subContent}</p>
                     </div>
                   </div>
-                  <div>
-                    <h4 className="text-lg font-semibold mb-1">{info.title}</h4>
-                    <p className="text-primary mb-1">{info.content}</p>
-                    <p className="text-muted-foreground text-sm">{info.subContent}</p>
-                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
 
-            {/* Additional CTA */}
-            <div className="glass-card p-6 bg-gradient-glass">
-              <h4 className="text-xl font-semibold mb-4">Need Immediate Assistance?</h4>
-              <p className="text-muted-foreground mb-4">
-                For urgent projects or technical support, our team is available for immediate consultation.
-              </p>
-              <Button variant="outline" className="glass-button">
-                Schedule a Call
-              </Button>
+              {/* Additional CTA */}
+              <div className="p-4 rounded-lg border border-white/10 bg-gradient-glass mt-auto">
+                <h4 className="text-xl font-semibold mb-4">Need Immediate Assistance?</h4>
+                <p className="text-muted-foreground mb-4">
+                  For urgent projects or technical support, our team is available for immediate consultation.
+                </p>
+                <Button variant="outline" className="glass-button">
+                  Schedule a Call
+                </Button>
+              </div>
             </div>
           </div>
         </div>
