@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { Heart, Brain, Lightbulb, Users } from 'lucide-react';
 import founderImage from '/lovable-uploads/5ffe4262-dea6-476d-b855-21cbcf3eb8ff.png';
-import coFounderImage from '@/assets/co-founder.jpg';
+import coFounderImage from '/lovable-uploads/eb485725-0d19-402a-9307-dd7d7dc67c37.png';
 export function AboutSection() {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
